@@ -6,11 +6,18 @@ public class EmpWageComputation {
 		System.out.println("Welcome to Employee Wage Computation");
 
 		int IS_FULL_TIME = 1;
-		int empAttendance = (int) Math.floor(Math.random()*10)%3;
+		int EMP_RATE_PER_HOUR = 20;
+
+		int empHrs  = 0;
+		int empWage = 0;
+
+		int empAttendance = (int) Math.floor(Math.random()*10)%2;
 
 		if(empAttendance == IS_FULL_TIME)
-			System.out.println("Employee is Present");
+			empHrs = 8;
 		else
-			System.out.println("Employee is Absent");
+			empHrs = 0;
+		empWage = empHrs * EMP_RATE_PER_HOUR;
+		System.out.println("Daily Employee Wage : "+empWage);
 	}
 }
